@@ -1,0 +1,104 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+:root {
+    --gap: 0.5rem;
+    --primary-color: #b92e81;
+}
+
+.clenka--jarmila {
+    --favourite-color: crimson;
+}
+
+.clenka--klotylda {
+    --favourite-color: purple;
+}
+
+.clenka--lucie {
+    --favourite-color: teal;
+}
+
+body {
+    background-color: #eee;
+    margin: 0;
+    font: 16px/1.5 sans-serif;
+}
+
+h1,
+h2 {
+    color: var(--primary-color);
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    padding: 1rem;
+    background-color: #fff;
+    margin: auto;
+}
+
+.clenka {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+}
+
+.clenka-foto img{
+    width: 140px;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.clenka-barva {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+span {
+    margin-left: 0.25rem;
+    font-size: 2rem;
+    color: var(--favourite-color)
+}
+
+@media screen and (min-width: 540px) and (max-width: 899px) {
+
+    .clenka {
+        display: flex;
+        text-align: left;
+    }
+
+    .clenka-foto {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .clenka-text {
+        flex-grow: 1;
+        margin: 0 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    .tym {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: calc(var(--gap) * -1);
+    }
+
+    .clenka {
+        flex: 1 0 5rem;
+        padding: 1rem;
+        margin: var(--gap);
+    }
+}

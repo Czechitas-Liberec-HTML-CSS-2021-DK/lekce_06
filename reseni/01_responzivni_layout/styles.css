@@ -1,0 +1,66 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #eee;
+    text-align: center;
+}
+
+.kontejner {
+    color: #000;
+    text-align: left;
+}
+
+.sloupec {
+    padding: 1rem;
+}
+
+.hlavicka	{ background-color: #7B1FA2; }
+.hlavni		{ background-color: #FFE0B2; }
+.levy		{ background-color: #F57C00; }
+.pravy		{ background-color: #FF9800; }
+.paticka	{ background-color: #212121; }
+
+/* ---------------------------------------------------- */
+
+.kontejner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+
+    .kontejner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hlavni {
+        order: 1;
+        flex: 1;
+    }
+
+    .pravy {
+        order: 2;
+        width: 150px;
+    }
+
+    .levy {
+        order: 3;
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+
+    .levy {
+        order: -1;
+        flex-basis: 250px;
+    }
+}
+
