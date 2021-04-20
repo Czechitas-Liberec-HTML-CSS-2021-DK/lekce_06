@@ -1,0 +1,44 @@
+/*
+    primary: #b92e81;
+    jarmila: crimson;
+    klotylda: purple;
+    lucie: teal;
+*/
+
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+
+body {
+    background-color: #eee;
+    margin: 0;
+    font: 16px/1.5 sans-serif;
+}
+
+h1,
+h2 {
+    color: #b92e81;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+article {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border: 1px solid #b92e81;
+    border-radius: 0.5rem;
+}
+
+img{
+    width: 140px;
+    border-radius: 50%;
+}
