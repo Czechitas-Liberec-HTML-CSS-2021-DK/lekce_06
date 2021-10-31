@@ -1,4 +1,4 @@
-# Tvořím web A–Z: lekce 6
+# HTML a CSS 1: lekce 6
 
 Podzim 2021, online
 
