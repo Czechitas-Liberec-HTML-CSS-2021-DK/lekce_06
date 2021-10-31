@@ -1,16 +1,8 @@
 # Tvořím web A–Z: lekce 6
 
-jaro 2021, Praha
+Podzim 2021, online
 
-<small>20. dubna 2021</small>
-
----
-
-## Box sizing
-
-- vlastnost, která určuje, jak se budou počítat rozměry prvku
-- chceme `box-sizing: border-box;`, viz začátek našeho CSS
-- [příklad na CodePen](https://cdpn.io/Kout/debug/WNRNGgX)
+<small>1. listopadu 2021</small>
 
 ---
 
@@ -128,37 +120,5 @@ note:
 - čisté HTML (bez CSS) je 100% responzivní
 - Všechna výše uvedené šířky ber orientečně!!! Vždycky záleží na konkrétním designu a obsahu stránky.
 - neřešte zařízení, ale design ⇒ když je to ošklivé, přidejte breakpoint a upravte vzhled
-
----
-
-# Proměnné vlastnosti <br> (CSS custom properties)
-
-note:
-
-- mají mnohem širší použití, ale nám zatím postačí využít je jako prosté proměnné pro opakující se hodnoty (barvy, odsazení)
-
-
----
-
-## Proměnné vlastnosti
-
-```css
-:root {
-    --primary: #40bf95;
-}
-
-h1 {
-    color: var(--primary);
-}
-
-```
-
-- `:root` ~ root element => prvek `html`
-
-note:
-
-- kořenový prvek
-- jsou to vlastnosti, definovat je musíme pro nějaký prvek
-- obvykle je to prvek `html`
 
 ---
