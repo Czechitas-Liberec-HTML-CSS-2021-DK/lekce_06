@@ -1,0 +1,9 @@
+
+/* pri okne sirsim nez 500px se barva zmeni na zlutou */
+@media (min-width: 1000px) {
+
+	body {
+		background-color: yellow;
+	}
+
+}

@@ -1,0 +1,13 @@
+/* ------------- pod čáru přijdou tvé styly ------------- */
+
+.banner {
+    display: none;
+}
+
+@media (min-width: 500px) {
+
+	.banner {
+		display: block;
+	}
+
+}

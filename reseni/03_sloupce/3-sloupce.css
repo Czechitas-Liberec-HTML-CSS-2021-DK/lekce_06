@@ -1,0 +1,20 @@
+/* ------------- pod čáru přijdou tvé styly ------------- */
+
+@media (min-width: 600px) {
+
+    .sloupec {
+        width: 33.33333%;
+        float: left;
+    }
+
+    /* .obdelnik {
+	flex: 1;
+	margin:10px;
+    }
+
+    .kontejner {
+        display: flex;
+    } */
+
+}
+
