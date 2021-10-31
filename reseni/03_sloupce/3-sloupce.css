@@ -7,14 +7,12 @@
         float: left;
     }
 
-    /* .obdelnik {
-	flex: 1;
-	margin:10px;
-    }
+    /* .kontejner {
+		display: flex;
+	}
 
-    .kontejner {
-        display: flex;
-    } */
-
+	.sloupec {
+		flex: 1 1 33.333%;
+	} */
 }
 
