@@ -112,14 +112,14 @@ Podzim 2021, online
 
 ## 1. cvičení - banner
 
-+
++ https://github.com/Czechitas-Liberec-HTML-CSS-2021-DK/lekce_06/tree/main/cviceni/02_banner
 + Doplň CSS tak, aby červený banner nebyl vidět na obrazovkách užších než 500 pixelů.
 
 ---
 
 ## 2. Cvičení 2 – sloupce
 
-+
++ https://github.com/Czechitas-Liberec-HTML-CSS-2021-DK/lekce_06/tree/main/cviceni/03_sloupce
 + `Nastav v CSS pro třídy kontejner a sloupec vlastnosti tak, aby na obrazovce širší než 600px byly všechny 3 obdélníky vedle sebe.`
 
 ---
