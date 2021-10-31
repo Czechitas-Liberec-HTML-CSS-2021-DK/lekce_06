@@ -10,6 +10,25 @@ Podzim 2021, online
 
 ---
 
+## Layouty
++ Fixní
++ Fluidní
++ Adaptivní
++ Responzivní
+
+---
+
+## Fixní layout
++ Již dlouho překonaný styl
++ Fixní = statický
++ Většina elementů v px
++ Elementy se po stránce nepohybují
++ Nezáleží na velikosti obrazovky
+
+<img src="https://miro.medium.com/max/2000/1*dUZudP2xfPLzMiw5L8ieTQ.gif" style="max-height: 180vh;" />
+
+---
+
 ## Media queries
 
 ```css
