@@ -29,21 +29,58 @@ Podzim 2021, online
 
 ---
 
+## Fluidní layout
++ Stále hodně používaný, ale překonaný
++ Většina velikostí v %
++ Elementy se po stránce nepohybují
++ Záleží na velikosti obrazovky
++ Není vhodný pro mobilní  zařízení
+
+<img src="https://miro.medium.com/max/2000/1*Hul4o5D73lpzVeVTk2Cuag.gif" style="max-height: 180vh;" />
+
+---
+
+## Adaptivní layout
++ Před media queries asi nejpoužívanější
++ Pro každou velikost fixně definovaná verze
++ Elementy už se na stránce pohybují
++ Záleží na velikosti obrazovky
++ Zbytečný kód pro každou verzi
+
+<img src="https://miro.medium.com/max/2000/1*LP6jyJPC17EVOk8nKEHYzg.gif" style="max-height: 180vh;" />
+
+---
+
+## Responsivní layout
++ Bere si to nejlepší z fluidního a adaptivního
++ Používají se breakpointy - media-queries
++ Rozděluje rozlišení do rozmezí
++ Elementy se přesouvají, mění pozici i velikost
++ Minimalizuje zdrojový kód
+
+<img src="https://miro.medium.com/max/2000/1*jGg5Y0CIZSGSTDTabsarbQ.gif" style="max-height: 180vh;" />
+
+---
+
+## Mobile first
+
+<img src="https://content.altexsoft.com/media/2017/04/mobile-first-design-1024x404.png" style="max-height: 130vh;" />
+
+---
+
+## Mobile first
+
++ začínám na úzké obrazovce (cca 320–360 px)
++ vše pod sebou
++ základní styly (font, barvy, velikost písma, odsazení)
++ jakmile spokojenost, zvětšuji šířku okna a opravuji ohavnosti
++ nakonec zarazím šíři stránky pomocí (max-width) někde mezi 1200–1920 px
+
+---
+
 ## Media queries
 
-```css
-@media screen and (min-width: 60rem;) {
-    /* Pravidla, která se uplatní pouze, když platí obalující podmínka. */
-    h1 {
-        font-size: 3.5rem;
-    }
-}
-```
-
-note:
-
-- v případě šířek hovoříme o tzv. _breakpointu_, kdy se skokově nějak změní vzhled prvku
-- nedejte se zmást frameworky jako je Bootstrap, které mají pevně dané breakpointy (mobil, tablet, desktop), breakpointy předávejte dle potřeby
+<img src="https://www.vzhurudolu.cz/prirucka-content/dist/images/original/media-query.jpg" style="max-height: 130vh;" />
 
 ---
 
@@ -51,12 +88,8 @@ note:
 
 - `screen` – libovolná obrazovka, drtivá většina našich příkladů
 - `print` – tisková verze HTML dokumentu
-- `all` – všechna média, tj. platí vždy
+- `all` – všechna média, latí vždy. Výchozí (default hodnota)
 - `speech` – hlasová zařízení, která čtou stránku (čtečka pro nevidomé, Siri, Alexa)
-
-note:
-
-- tiskové styly je slušné ke stránce připojit a skrýt v nich balast, nepotřebný na papíře (záhlaví, navigace, zápatí), barvy změnit na černobílé apod. Skrýváme pomocí `display: none;`
 
 ---
 
@@ -65,12 +98,7 @@ note:
 - nejčastěji rozměry zařízení (šířka/výška)
 - nejčastěji `(min-width)`, případně `(max-width)`
 - v některých případech `(min-height)`, `(max-height)`
-
-note:
-
-- Jak se vyhodnotí `(max-height)`?
-- pravidla pro (min-height) třeba, když je třeba zmenšit záhlaví, aby byl vidět obsah stránky
-- Tohle všechno funguje pouze za předpokladu, že v hlavičce (`<head>`) stránky uvedu kouzelný meta tag…
+- Např.: `@media (min-width: 1025px) { … }`
 
 ---
 
@@ -80,24 +108,32 @@ note:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-note:
+---
 
-- bez něj se web nebude chovat responzivně
+## 1. cvičení - banner
+
++
++ Doplň CSS tak, aby červený banner nebyl vidět na obrazovkách užších než 500 pixelů.
 
 ---
+
+## 2. Cvičení 2 – sloupce
+
++
++ `Nastav v CSS pro třídy kontejner a sloupec vlastnosti tak, aby na obrazovce širší než 600px byly všechny 3 obdélníky vedle sebe.`
+
+---
+
 
 ### Další podmínky
 
 - `@media screen and (orientation: landscape)` × `(orientation: portrait)`
 - `@media screen and (any-hover: hover)` ~ „zařízení opatřená myší“ (mají jeden nebo více vstupů ovládajících kurzor)
 
----
 
-## Kombinování podmínek
+## Kombinování podmínek (AND)
 
----
-
-### Splněny musí být všechny (logické AND)
+- Splněny musí být všechny (logické AND)
 
 ```css
 
@@ -105,14 +141,9 @@ note:
 
 ```
 
-note:
+## Kombinování podmínek – OR
 
-- musí platit to i to
-- máme vlastně už v základním zápise: screen + šířka
-
----
-
-### Splněna musí být alespoň jedna (logické OR)
+- Splněna musí být alespoň jedna (logické OR)
 
 ```css
 
@@ -120,24 +151,10 @@ note:
 
 ```
 
-note:
+## 3. povinný úkol
 
-- platí buď pro šířky do 500 px a pak zase od 1000 px nahoru
-
----
-
-## Mobile first
-
-- začínám na úzké obrazovce (cca 320–360 px)
-- vše pod sebou
-- základní styly (font, barvy, velikost písma, odsazení)
-- jakmile spokojenost, zvětšuji šířku okna a opravuji ohavnosti
-- nakonec zarazím šíři stránky pomocí (`max-width`) někde mezi 1200–1920 px
-
-note:
-
-- čisté HTML (bez CSS) je 100% responzivní
-- Všechna výše uvedené šířky ber orientečně!!! Vždycky záleží na konkrétním designu a obsahu stránky.
-- neřešte zařízení, ale design ⇒ když je to ošklivé, přidejte breakpoint a upravte vzhled
+- Zadaný v GitHub Classroom https://classroom.github.com/a/kKgsYyA6 
+- Ukážeme si, co je třeba
+- Odevzdat do další lekce 8.11.
 
 ---
